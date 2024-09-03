@@ -7,9 +7,9 @@
   <style>
     .task-card {
       background-color: rgb(213, 212, 229);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px #e5e7eb;
       border-radius: 0.5rem;
-      padding: 1.5rem;
+      padding: 0.5rem;
       margin: 0.5rem;
       cursor: move;
     }
@@ -20,6 +20,8 @@
       border-radius: 0.5rem;
       padding: 1rem;
       margin-bottom: 1rem;
+
+
     }
 
     .category-container h3 {
@@ -31,6 +33,8 @@
       display: flex;
       overflow-x: auto;
       margin-bottom: 1rem;
+  justify-content: flex-end;
+  flex-direction: column;
     }
 
     .categories-container {
@@ -48,13 +52,12 @@
   <div class="container mx-auto p-4">
     <h1 class="text-2xl font-bold mb-4">Health Management</h1>
     <div class="tasks-container">
-        <div>
+    <div>
       <div class="task-card" draggable="true" ondragstart="onDragStart(event)">Change medication dose</div>
       <div class="task-card" draggable="true" ondragstart="onDragStart(event)">Cancel your appointment </div>
       <div class="task-card" draggable="true" ondragstart="onDragStart(event)">Having new symptoms that you never experienced before</div>
       <div class="task-card" draggable="true" ondragstart="onDragStart(event)">Change medication for having side effects</div>
       <div class="task-card" draggable="true" ondragstart="onDragStart(event)">Reschedule your appointment.</div>
-
     </div>
     <div>
       <div class="task-card" draggable="true" ondragstart="onDragStart(event)">Pay your bill</div>
@@ -62,16 +65,14 @@
       <div class="task-card" draggable="true" ondragstart="onDragStart(event)">Refill a prescription.</div>
       <div class="task-card" draggable="true" ondragstart="onDragStart(event)">You have a runny nose,determine what you have and if you should see a provider.</div>
       <div class="task-card" draggable="true" ondragstart="onDragStart(event)">Schedule an appt with a specialist.</div>
-
     </div>
     <div>
       <div class="task-card" draggable="true" ondragstart="onDragStart(event)">Check the status of your referral.</div>
       <div class="task-card" draggable="true" ondragstart="onDragStart(event)">Change medication because the current one is expensive</div>
       <div class="task-card" draggable="true" ondragstart="onDragStart(event)">Check your test results. </div>
-      <div class="task-card" draggable="true" ondragstart="onDragStart(event)">You have a headache
-        you want to get treated in the next few hours at home by scheduling a virtual express care.</div>
+      <div class="task-card" draggable="true" ondragstart="onDragStart(event)">You have a headache you want to get treated in the next few hours at home by scheduling a virtual express care.</div>
     </div>
-      
+
     </div>
     <div class="categories-container">
       <div class="category-container" ondragover="onDragOver(event)" ondrop="onDrop(event, this)">
